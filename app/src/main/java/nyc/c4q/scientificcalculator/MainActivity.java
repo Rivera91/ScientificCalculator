@@ -2,8 +2,12 @@ package nyc.c4q.scientificcalculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.fathzer.soft.javaluator.DoubleEvaluator;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -40,5 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public void getAnswer(View view) {
+        DoubleEvaluator evaluator = new DoubleEvaluator();
+        Log.d("ANSWER", "getAnswer: = " + evaluator.evaluate("4+3+55-3-4") );
     }
 }
