@@ -82,28 +82,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setContentView(R.layout.vertical_layout);
 
 //        call buttons
-        answer = (TextView) findViewById(R.id.output_text_view);
-        input = (EditText) findViewById(R.id.input_edit_text);
 
-        radians = (Button) findViewById(R.id.rad_button);
-        inverse = (Button) findViewById(R.id.inv_button);
-        pi = (Button) findViewById(R.id.pi_button);
-        e = (Button) findViewById(R.id.e_button);
-        answer = (Button) findViewById(R.id.ans_button);
-
-        degree = (Button) findViewById(R.id.deg_button);
-        sin = (Button) findViewById(R.id.sin_button);
-        cos = (Button) findViewById(R.id.cos_button);
-        tan = (Button) findViewById(R.id.tan_button);
-        exp = (Button) findViewById(R.id.exp_button);
-
-        factorial = (Button) findViewById(R.id.factorial_button);
-        ln = (Button) findViewById(R.id.ln_button);
-        log = (Button) findViewById(R.id.log_button);
-        squareRoot = (Button) findViewById(R.id.square_button);
-        exponent = (Button) findViewById(R.id.exp_button);
+//        answer = (TextView) findViewById(R.id.output_text_view);
+//        input = (EditText) findViewById(R.id.input_edit_text);
+//
+//        radians = (Button) findViewById(R.id.rad_button);
+//        inverse = (Button) findViewById(R.id.inv_button);
+//        pi = (Button) findViewById(R.id.pi_button);
+//        e = (Button) findViewById(R.id.e_button);
+//        answer = (Button) findViewById(R.id.ans_button);
+//
+//        degree = (Button) findViewById(R.id.deg_button);
+//        sin = (Button) findViewById(R.id.sin_button);
+//        cos = (Button) findViewById(R.id.cos_button);
+//        tan = (Button) findViewById(R.id.tan_button);
+//        exp = (Button) findViewById(R.id.exp_button);
+//
+//        factorial = (Button) findViewById(R.id.factorial_button);
+//        ln = (Button) findViewById(R.id.ln_button);
+//        log = (Button) findViewById(R.id.log_button);
+//        squareRoot = (Button) findViewById(R.id.square_button);
+//        exponent = (Button) findViewById(R.id.exp_button);
 
 //        radians2 = (Button) findViewById(R.id.rad_button_2);
 //        inverse2 =(Button) findViewById(R.id.inv_button_2);
@@ -148,23 +150,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         plus = (Button) findViewById(R.id.plus_button);
 
 //        setOnClickListener
-        radians.setOnClickListener(this);
-        inverse.setOnClickListener(this);
-        pi.setOnClickListener(this);
-        e.setOnClickListener(this);
-        answer.setOnClickListener(this);
 
-        degree.setOnClickListener(this);
-        sin.setOnClickListener(this);
-        cos.setOnClickListener(this);
-        tan.setOnClickListener(this);
-        exp.setOnClickListener(this);
-
-        factorial.setOnClickListener(this);
-        ln.setOnClickListener(this);
-        log.setOnClickListener(this);
-        squareRoot.setOnClickListener(this);
-        exponent.setOnClickListener(this);
+//        radians.setOnClickListener(this);
+//        inverse.setOnClickListener(this);
+//        pi.setOnClickListener(this);
+//        e.setOnClickListener(this);
+//        answer.setOnClickListener(this);
+//
+//        degree.setOnClickListener(this);
+//        sin.setOnClickListener(this);
+//        cos.setOnClickListener(this);
+//        tan.setOnClickListener(this);
+//        exp.setOnClickListener(this);
+//
+//        factorial.setOnClickListener(this);
+//        ln.setOnClickListener(this);
+//        log.setOnClickListener(this);
+//        squareRoot.setOnClickListener(this);
+//        exponent.setOnClickListener(this);
 
 //        radians2 = (Button) findViewById(R.id.rad_button_2);
 //        inverse2 =(Button) findViewById(R.id.inv_button_2);
@@ -210,10 +213,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-
-
     @Override
     public void onClick(View view) {
+
 
 
     }
