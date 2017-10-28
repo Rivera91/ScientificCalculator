@@ -4,11 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import com.fathzer.soft.javaluator.*;
 
 
 public class MainActivity extends AppCompatActivity {
 
     //TextView
+
     Button  radButton,sevenButton,fourButton,oneButton,zeroButton,invButton,
             piButton,eButton,ansButton,degButton,sinButton,cosButton,tanButton,
             expButton,lnButton,logButton,squareRootButton,exponentButton,leftParButton,
