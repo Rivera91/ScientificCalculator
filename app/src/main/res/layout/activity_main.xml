@@ -1,414 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="nyc.c4q.scientificcalculator.MainActivity"
-    android:orientation="horizontal">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/output_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:gravity="right"/>
+        android:gravity="right"
+        android:layout_weight="1"/>
 
     <EditText
         android:id="@+id/input_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text=""
         android:gravity="right"/>
 
     <LinearLayout
+        android:id="@+id/calculator"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/scientific_layout_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:orientation="horizontal">
-
-//COLUMN ONE
-    <LinearLayout
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_weight="4"
+        android:orientation="horizontal"
         >
-        <Button
-            android:id="@+id/rad_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rad"/>
-        <Button
-            android:id="@+id/inv_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inv"/>
-        <Button
-            android:id="@+id/pi_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="π"/>
-        <Button
-            android:id="@+id/e_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="e"/>
-        <Button
-            android:id="@+id/ans_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ans"/>
 
-    </LinearLayout>
-
-//COLUMN TWO
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <Button
-            android:id="@+id/deg_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Deg"/>
-        <Button
-            android:id="@+id/sin_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sin"/>
-        <Button
-            android:id="@+id/cos_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="cos"/>
-        <Button
-            android:id="@+id/tan_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="tan"/>
-        <Button
-            android:id="@+id/exp_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="EXP"/>
-
-    </LinearLayout>
-
-
-//COLUMN THREE
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <Button
-            android:id="@+id/factorial_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="x!"/>
-        <Button
-            android:id="@+id/ln_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ln"/>
-        <Button
-            android:id="@+id/log_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="log"/>
-        <Button
-            android:id="@+id/squareRoot_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="√"/>
-        <Button
-            android:id="@+id/exponent_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text= "x^y" />
-
-    </LinearLayout>
-
-        </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/scientific_layout_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:orientation="horizontal"
-                >
-
-
-
-        //COLUMN ONE 2
+        //COLUMN FOUR
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <Button
-                android:id="@+id/rad_button_2"
-                android:layout_width="wrap_content"
+                android:id="@+id/leftBracket_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Rad"/>
+                android:text="(" />
+
             <Button
-                android:id="@+id/inv_button_2"
-                android:layout_width="wrap_content"
+                android:id="@+id/seven_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Inv"/>
+                android:text="7"/>
             <Button
-                android:id="@+id/pi_button_2"
-                android:layout_width="wrap_content"
+                android:id="@+id/four_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="π"/>
+                android:text="4"/>
             <Button
-                android:id="@+id/e_button_2"
-                android:layout_width="wrap_content"
+                android:id="@+id/one_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="e"/>
+                android:text="1"/>
             <Button
-                android:id="@+id/rnd_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/zero_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Rnd"/>
+                android:text="0"/>
 
         </LinearLayout>
 
-        //COLUMN TWO 2
+
+        //COLUMN FIVE
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
             <Button
-                android:id="@+id/deg_button_2"
-                android:layout_width="wrap_content"
+                android:id="@+id/rightBracket_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Deg"/>
+                android:text=")"/>
             <Button
-                android:id="@+id/sin_1_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/eight_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="sin-1"/>
+                android:text="8"/>
             <Button
-                android:id="@+id/cos_1_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/five_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="cos-1"/>
+                android:text="5"/>
             <Button
-                android:id="@+id/tan_1_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/two_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="tan-1"/>
+                android:text="2"/>
             <Button
-                android:id="@+id/exp_button_2"
-                android:layout_width="wrap_content"
+                android:id="@+id/dot_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="EXP"/>
+                android:text="."/>
 
         </LinearLayout>
 
 
-        //COLUMN THREE 2
+        //COLUMN SIX
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <Button
-                android:id="@+id/factorial_button_2"
-                android:layout_width="wrap_content"
+                android:id="@+id/percent_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="x!"/>
+                android:text="%"/>
             <Button
-                android:id="@+id/e_x_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/nine_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="e^x"/>
+                android:text="9"/>
             <Button
-                android:id="@+id/ten_x_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/six_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="10^x"/>
+                android:text="6"/>
             <Button
-                android:id="@+id/square_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/three_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="x^2"/>
+                android:text="3"/>
             <Button
-                android:id="@+id/root_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/equals_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text= "y√x" />
+                android:text="="/>
 
         </LinearLayout>
 
-        </LinearLayout>
-
+        //COLUMN SEVEN
         <LinearLayout
-            android:id="@+id/calculator"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:orientation="horizontal"
-            >
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-//COLUMN FOUR
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="AC"/>
+            <Button
+                android:id="@+id/division_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="/"/>
+            <Button
+                android:id="@+id/multiply_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="*"/>
+            <Button
+                android:id="@+id/subtraction_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="-"/>
+            <Button
+                android:id="@+id/plus_button"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="+"/>
 
-        <Button
-            android:id="@+id/leftBracket_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="("/>
-        <Button
-            android:id="@+id/seven_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="7"/>
-        <Button
-            android:id="@+id/four_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4"/>
-        <Button
-            android:id="@+id/one_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"/>
-        <Button
-            android:id="@+id/zero_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"/>
-
-    </LinearLayout>
-
-
-//COLUMN FIVE
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-        <Button
-            android:id="@+id/rightBracket_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=")"/>
-        <Button
-            android:id="@+id/eight_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="8"/>
-        <Button
-            android:id="@+id/five_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5"/>
-        <Button
-            android:id="@+id/two_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2"/>
-        <Button
-            android:id="@+id/dot_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="."/>
-
-    </LinearLayout>
-
-
-//COLUMN SIX
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/percent_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="%"/>
-        <Button
-            android:id="@+id/nine_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9"/>
-        <Button
-            android:id="@+id/six_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="6"/>
-        <Button
-            android:id="@+id/three_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3"/>
-        <Button
-            android:id="@+id/equals_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="="/>
-
-    </LinearLayout>
-
-//COLUMN SEVEN
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/clear_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AC"/>
-        <Button
-            android:id="@+id/division_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/"/>
-        <Button
-            android:id="@+id/multiply_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"/>
-        <Button
-            android:id="@+id/subtraction_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"/>
-        <Button
-            android:id="@+id/plus_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"/>
-
-    </LinearLayout>
-
-    </LinearLayout>
-
-    </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
