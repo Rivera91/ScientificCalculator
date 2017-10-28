@@ -9,12 +9,11 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     //TextView
-    Button  radButton,sevenButton,fourButton,oneButton,zeroButton,
-            mMinusButton,eightButton,fiveButton,twoButton,periodButton,
-            mPlusButton,nineButton,sixButton,threeButton,plusMinusButton;
-
-
-
+    Button  radButton,sevenButton,fourButton,oneButton,zeroButton,invButton,
+            piButton,eButton,ansButton,degButton,sinButton,cosButton,tanButton,
+            expButton,lnButton,logButton,squareRootButton,exponentButton,leftParButton,
+            rightParButton,eightButton,fiveButton,twoButton,dotButton,
+            nineButton,sixButton,threeButton;
 
 
     @Override
@@ -31,10 +30,28 @@ public class MainActivity extends AppCompatActivity {
         eightButton= (Button) findViewById(R.id.eight_button);
         fiveButton= (Button) findViewById(R.id.five_button);
         twoButton= (Button) findViewById(R.id.two_button);
-        periodButton= (Button) findViewById(R.id.period_button);
+        dotButton= (Button) findViewById(R.id.dot_button);
         nineButton = (Button) findViewById(R.id.nine_button);
         sixButton = (Button) findViewById(R.id.six_button);
         threeButton = (Button) findViewById(R.id.three_button);
+        invButton = (Button) findViewById(R.id.inv_button);
+        rightParButton = (Button) findViewById(R.id.rightPar_button);
+        piButton = (Button) findViewById(R.id.pi_button);
+        eButton = (Button) findViewById(R.id.e_button);
+        ansButton = (Button) findViewById(R.id.ans_button);
+        degButton = (Button) findViewById(R.id.deg_button);
+        sinButton = (Button) findViewById(R.id.sin_button);
+        cosButton = (Button) findViewById(R.id.cos_button);
+        tanButton = (Button) findViewById(R.id.tan_button);
+        expButton = (Button) findViewById(R.id.exp_button);
+        lnButton = (Button) findViewById(R.id.ln_button);
+        logButton = (Button) findViewById(R.id.log_button);
+        squareRootButton = (Button) findViewById(R.id.squareRoot_button);
+        exponentButton = (Button) findViewById(R.id.exponent_button);
+        leftParButton = (Button) findViewById(R.id.leftPar_button);
+
+
+
 
 
 
