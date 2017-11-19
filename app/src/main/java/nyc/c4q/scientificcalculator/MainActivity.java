@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fathzer.soft.javaluator.*;
 
@@ -175,7 +176,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 display += ")";
                 break;
             case R.id.percent_button:
-                display += "%";
+//                display += "%";
+                equalsButtonClicked = true;
+                getPercent();
+                Toast.makeText(getApplicationContext(),"You cannot do percent calculation together with other calculations!",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.equals_button:
                 getAnswer();
@@ -194,6 +198,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void getAnswer() {
+
         DoubleEvaluator evaluator = new DoubleEvaluator();
         result = evaluator.evaluate(display);
         outputText = String.valueOf(result);
@@ -201,7 +206,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         input.setText("");
     }
 
-//    private void percent(){
-//        private double n =
-//    }
+    private void getPercent(){
+        double n = Double.parseDouble(display);
+        double percentage = n/100;
+        outputText = String.valueOf(percentage);
+        output.setText(outputText);
+        input.setText("");
+    }
 }
