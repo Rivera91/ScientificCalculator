@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import com.fathzer.soft.javaluator.*;
 
 import com.fathzer.soft.javaluator.DoubleEvaluator;
@@ -15,7 +16,9 @@ import com.fathzer.soft.javaluator.DoubleEvaluator;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     double result;
-    double inputNumber;
+
+    String inputNumberText;
+    String outputText;
 
     TextView output;
     EditText input;
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button leftBracketButton, rightBracketButton, percentButton, equalsButton, allClearButton,
             divisionButton, multiplyButton, substractButton, addButton;
+    private boolean equalsButtonClicked;
 
 
     @Override
@@ -105,48 +109,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    public void getAnswer(View view) {
-        Button button = (Button) view;
-        String data = button.getText().toString();
-
-
-        }
-//        DoubleEvaluator evaluator = new DoubleEvaluator();
-//        Log.d("ANSWER", "getAnswer: = " + evaluator.evaluate("4+3+55-3-4") );
-
-
     @Override
     public void onClick(View view) {
+        equalsButtonClicked = false;
         switch (view.getId()) {
             case R.id.zero_button:
                 display += "0";
+                inputNumberText += "0";
                 break;
             case R.id.one_button:
                 display += "1";
+                inputNumberText += "1";
                 break;
             case R.id.two_button:
                 display += "2";
+                inputNumberText += "2";
                 break;
             case R.id.three_button:
                 display += "3";
+                inputNumberText += "3";
                 break;
             case R.id.four_button:
                 display += "4";
+                inputNumberText += "4";
                 break;
             case R.id.five_button:
                 display += "5";
+                inputNumberText += "5";
                 break;
             case R.id.six_button:
                 display += "6";
+                inputNumberText += "6";
                 break;
             case R.id.seven_button:
                 display += "7";
+                inputNumberText += "7";
                 break;
             case R.id.eight_button:
                 display += "8";
+                inputNumberText += "8";
                 break;
             case R.id.nine_button:
                 display += "9";
+                inputNumberText += "9";
                 break;
             case R.id.dot_button:
                 display += ".";
@@ -158,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 display += "-";
                 break;
             case R.id.multiply_button:
-                display += "X";
+                display += "*";
                 break;
             case R.id.division_button:
                 display += "/";
@@ -172,7 +177,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.percent_button:
                 display += "%";
                 break;
+            case R.id.equals_button:
+                getAnswer();
+                equalsButtonClicked = true;
+                break;
+            case R.id.clear_button:
+                display = "";
+                break;
         }
-        input.setText(display);
+
+        if(equalsButtonClicked){
+            display = "";
+        }else{
+            input.setText(display);
+        }
     }
+
+    private void getAnswer() {
+        DoubleEvaluator evaluator = new DoubleEvaluator();
+        result = evaluator.evaluate(display);
+        outputText = String.valueOf(result);
+        output.setText(outputText);
+        input.setText("");
+    }
+
+//    private void percent(){
+//        private double n =
+//    }
 }
