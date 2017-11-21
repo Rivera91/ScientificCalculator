@@ -198,19 +198,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void getAnswer() {
-
+        if(display != ""){
         DoubleEvaluator evaluator = new DoubleEvaluator();
         result = evaluator.evaluate(display);
         outputText = String.valueOf(result);
         output.setText(outputText);
         input.setText("");
+        }else{
+         display = "";
+         Toast.makeText(getApplicationContext(),"Invalid Input",Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void getPercent(){
-        double n = Double.parseDouble(display);
-        double percentage = n/100;
-        outputText = String.valueOf(percentage);
-        output.setText(outputText);
-        input.setText("");
+
+        if(display != ""){
+            double n = Double.parseDouble(display);
+            double percentage = n/100;
+            outputText = String.valueOf(percentage);
+            output.setText(outputText);
+            input.setText("");
+        }else{
+            display = "";
+            Toast.makeText(getApplicationContext(),"Invalid Input",Toast.LENGTH_SHORT).show();
+        }
     }
 }
